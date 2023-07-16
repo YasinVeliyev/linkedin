@@ -14,5 +14,5 @@ fn read_file(path: &str) -> Result<Vec<Vec<String>>, Error> {
                 .map(|word| word.to_owned())
                 .collect()
         })
-        .collect::<Vec<Vec<String>>>())
+        .collect())
 }
