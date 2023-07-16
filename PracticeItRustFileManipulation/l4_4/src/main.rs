@@ -20,12 +20,6 @@ fn replace_x_with_y(
     replacement_map: &HashMap<String, String>,
 ) -> Vec<String> {
     let mut contents = contents;
-    // contents
-    //     .iter_mut()
-    //     .for_each(|word| match replacement_map.get(word) {
-    //         Some(value) => *word = value.clone(),
-    //         None => {}
-    //     });
 
     contents.iter_mut().for_each(|word| {
         if let Some(value) = replacement_map.get(word) {
