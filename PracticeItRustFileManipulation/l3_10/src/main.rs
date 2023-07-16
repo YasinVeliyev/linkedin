@@ -1,5 +1,6 @@
+use std::fs::File;
 use std::io::Error;
-
+use std::io::Read;
 fn main() {
     println!("Hello, world!");
     println!("{:?}", read_file("file_with_lines").unwrap())
