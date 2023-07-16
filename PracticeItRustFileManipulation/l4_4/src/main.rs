@@ -12,12 +12,12 @@ fn main() {
     ]);
 
     println!("Hello, world!");
-    println!("{:?}", replace_x_with_y(words, replacement_map));
+    println!("{:?}", replace_x_with_y(words, &replacement_map));
 }
 
 fn replace_x_with_y(
     contents: Vec<String>,
-    replacement_map: HashMap<String, String>,
+    replacement_map: &HashMap<String, String>,
 ) -> Vec<String> {
     let mut contents = contents;
     // contents
