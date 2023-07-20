@@ -1,4 +1,4 @@
-pub(crate) fn get_uniques_items<T: Ord + Copy>(items: Vec<T>) -> Vec<T> {
+pub fn get_uniques_items<T: Ord + Copy>(items: Vec<T>) -> Vec<T> {
     let mut uniques_items = Vec::new();
     items.iter().for_each(|a| {
         if !uniques_items.contains(a) {

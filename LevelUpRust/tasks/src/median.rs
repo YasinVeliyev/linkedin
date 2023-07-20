@@ -1,4 +1,4 @@
-pub(crate) fn find_median(mut v: Vec<f32>) -> Option<f32> {
+pub fn find_median(mut v: Vec<f32>) -> Option<f32> {
     if v.is_empty() {
         return None;
     }
