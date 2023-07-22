@@ -1,5 +1,5 @@
-
-
+use chrono::Local;
+use tasks::deadline::*;
 fn main() {
-    let _: Vec<f32> = vec![1.0, 2.0, 3.0];
+    let _ = ImportantEvent::new("Ad", Local::now().date_naive());
 }
