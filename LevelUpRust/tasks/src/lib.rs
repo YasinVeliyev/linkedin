@@ -1,5 +1,6 @@
 #![allow(dead_code)]
 
+pub mod convert_between_celsius_and_fahrenheit;
 pub mod convert_text_to_morse_code;
 pub mod deadline;
 pub mod insensitive_sort;
