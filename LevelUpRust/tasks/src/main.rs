@@ -1,5 +1,4 @@
-use chrono::Local;
-use tasks::deadline::*;
+use tasks::number_of_weeks_between_two_dates::number_of_weeks_between_two_dates;
 fn main() {
-    let _ = ImportantEvent::new("Ad", Local::now().date_naive());
+    let k = number_of_weeks_between_two_dates("2022-10-10", "2023-10-10");
 }
