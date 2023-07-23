@@ -1,4 +1,8 @@
-use tasks::number_of_weeks_between_two_dates::number_of_weeks_between_two_dates;
+use tasks::validate_an_isbn_number::*;
 fn main() {
-    let k = number_of_weeks_between_two_dates("2022-10-10", "2023-10-10");
+    let numbers= vec![9_u8, 7, 8, 1, 8, 6, 1, 9, 7, 8, 7, 6,9];
+    let end=9_u8;
+    let numbers=vec![9_u8, 7, 8, 3, 1, 6, 1, 4, 8, 4, 1, 0,0];
+   let a = ISBN13::check_isbn(&numbers).unwrap();
+   println!("{}",a);
 }
