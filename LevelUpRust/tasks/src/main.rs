@@ -1,4 +1,5 @@
-use tasks::run_length_encoding::RunLengthEncoding;
+use chrono::NaiveDate;
+use tasks::{run_length_encoding::RunLengthEncoding, handle_inconsistent_dates::flexible_date_parse};
 
 fn main() {
     let decoded_string = "AAAAA AAAAAAAAAA AAAAAAAAAAAAAAAAAAAA";
@@ -9,4 +10,7 @@ fn main() {
         decoded_string == RunLengthEncoding::decode(&encoded_string)
     );
     println!("{}", encoded_string);
+
+    println!("{:?}",NaiveDate::parse_from_str("1999/Mar/02", "%Y/%b/%d"));
+    println!("{:?}",flexible_date_parse("1999/Mar/02"))
 }

@@ -3,6 +3,7 @@
 pub mod convert_between_celsius_and_fahrenheit;
 pub mod convert_text_to_morse_code;
 pub mod deadline;
+pub mod handle_inconsistent_dates;
 pub mod insensitive_sort;
 pub mod median;
 pub mod number_of_weeks_between_two_dates;
