@@ -3,14 +3,14 @@ pub struct RunLengthEncoding {}
 impl RunLengthEncoding {
     pub fn encode(s: &str) -> String {
         let mut s = s.split("");
-        let mut encoding_vec = Vec::new();
+        let mut encoding_str = String::new();
         let mut count = 1;
         let mut current: &str = s.nth(1).unwrap();
 
         for c in s {
             if c != current || count == 9 {
-                encoding_vec.push(i32::to_string(&count));
-                encoding_vec.push(current.to_owned());
+                encoding_str.push_str(&i32::to_string(&count));
+                encoding_str.push_str(current);
                 current = c;
                 count = 1;
             } else {
@@ -18,7 +18,7 @@ impl RunLengthEncoding {
             }
         }
 
-        encoding_vec.join("").to_string()
+        encoding_str
     }
 
     pub fn decode(s: &str) -> String {
