@@ -7,6 +7,7 @@ pub mod insensitive_sort;
 pub mod median;
 pub mod number_of_weeks_between_two_dates;
 pub mod print_any_text;
+pub mod run_length_encoding;
 pub mod sum_list_of_numbers_with_missing_values;
 pub mod unique_items;
 pub mod validate_an_isbn_number;

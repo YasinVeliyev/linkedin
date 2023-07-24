@@ -1,8 +1,12 @@
-use tasks::validate_an_isbn_number::*;
+use tasks::run_length_encoding::RunLengthEncoding;
+
 fn main() {
-    let numbers= vec![9_u8, 7, 8, 1, 8, 6, 1, 9, 7, 8, 7, 6,9];
-    let end=9_u8;
-    let numbers=vec![9_u8, 7, 8, 3, 1, 6, 1, 4, 8, 4, 1, 0,0];
-   let a = ISBN13::check_isbn(&numbers).unwrap();
-   println!("{}",a);
+    let decoded_string = "AAAAA AAAAAAAAAA AAAAAAAAAAAAAAAAAAAA";
+    let encoded_string = RunLengthEncoding::encode(decoded_string);
+
+    println!(
+        "{}",
+        decoded_string == RunLengthEncoding::decode(&encoded_string)
+    );
+    println!("{}", encoded_string);
 }

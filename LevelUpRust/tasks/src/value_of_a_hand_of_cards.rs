@@ -55,7 +55,7 @@ impl Hand {
                 } else if c != &0 {
                     *c
                 } else {
-                    1 as usize
+                    1_usize
                 }
             })
             .sum()
@@ -66,3 +66,8 @@ impl Hand {
     }
 }
 
+impl Default for Hand {
+    fn default() -> Self {
+        Self::new()
+    }
+}
